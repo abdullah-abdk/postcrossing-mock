@@ -151,73 +151,67 @@ This project fulfills all requirements of the given assignment:
 **Program:** BS Computer Science -->
 
 
+# PostCrossing Replica — MongoDB, API, and Firefox Extension
 
+## Overview
 
-# 🌍 PostCrossing Replica — MongoDB + API + Firefox Extension
+This project is a simplified replica of the original PostCrossing concept, where users send and receive postcards from random people around the world. The idea is that for every postcard a user sends, they will receive one back from another participant.
 
-## 📌 What is PostCrossing?
+The project demonstrates backend development, database integration, and browser extension functionality. It includes:
 
-PostCrossing is a website where people send and receive postcards from random users around the world. You send one postcard, and you get one in return — creating a global exchange cycle.
+* A **MongoDB database** for storing users and postcard data
+* A **Node.js and Express API** for handling postcard exchange and user pairing
+* A **Firefox Extension** for managing and searching PostCrossing tabs
 
----
-
-## 🎯 Project Overview
-
-This project is a **mock version** of PostCrossing. It includes:
-
-* A **MongoDB database** for users and postcards
-* A **Node.js + Express API** for managing postcards and pairing users
-* A **Firefox Extension** for sorting and searching postcard tabs
-
-It was made for academic purposes to practice **API development**, **database design**, and **browser extension building**.
+This project was developed for academic purposes to practice full-stack development and API design concepts.
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 
-| Component       | Technology            |
-| --------------- | --------------------- |
-| Backend         | Node.js + Express     |
-| Database        | MongoDB + Mongoose    |
-| API Testing     | Postman               |
-| Extension       | Firefox (Manifest v3) |
-| Language        | JavaScript (ES6)      |
-| Version Control | Git & GitHub          |
-
----
-
-## 🔁 Main Feature: Reciprocal Sending
-
-When a user requests to send a card:
-
-1. If another user is waiting → both get paired and exchange postcards
-2. If no one is waiting → the user is added to the queue until someone new joins
-
-This keeps the postcard exchange fair and continuous.
+| Component         | Technology            |
+| ----------------- | --------------------- |
+| Backend           | Node.js and Express   |
+| Database          | MongoDB with Mongoose |
+| API Testing       | Postman               |
+| Browser Extension | Firefox (Manifest v3) |
+| Language          | JavaScript (ES6)      |
+| Version Control   | Git and GitHub        |
 
 ---
 
-## 🦊 Firefox Extension Features
+## Core Functionality
 
-1. **Tab Sorting** – Sort PostCrossing tabs (ascending/descending by postcard code)
-2. **Hybrid Search** – Search by postcard code or title using AND/OR modes
+### Reciprocal Postcard Exchange
+
+1. When a user requests to send a postcard, the system checks for any waiting users.
+2. If a match is found, both users are paired, and postcards are generated for each direction.
+3. If no match is found, the user is added to a waiting queue until another user joins.
+4. This ensures a balanced and continuous postcard exchange cycle.
 
 ---
 
-## ⚙️ Setup Instructions
+## Firefox Extension Features
 
-1. Clone the repo
+* **Tab Sorting:** Sort open PostCrossing tabs in ascending or descending order based on postcard codes.
+* **Hybrid Search:** Search for postcards by code or title using either AND or OR logic modes for more accurate filtering.
+
+---
+
+## Installation and Setup
+
+1. Clone the repository
 
    ```bash
-   git clone <repo-url>
-   cd postcrossing-mock
+   git clone <repository-url>
+   cd postcrossing-replica
    ```
 2. Install dependencies
 
    ```bash
    npm install
    ```
-3. Create `.env` file
+3. Create an `.env` file
 
    ```
    MONGO_URL=mongodb://localhost:27017
@@ -230,26 +224,26 @@ This keeps the postcard exchange fair and continuous.
    npm start
    ```
 
-   or
+   or, for development mode:
 
    ```bash
    npm run dev
    ```
-5. Test endpoints using Postman
-6. Load the Firefox extension from `about:debugging#/runtime/this-firefox`
+5. Test API endpoints using Postman.
+6. Load the Firefox extension through `about:debugging#/runtime/this-firefox`.
 
 ---
 
-## 🚀 Future Improvements
+## Future Enhancements
 
-* Add a React frontend
-* Real-time updates with WebSocket
-* JWT authentication
-* Cloud postcard image storage
+* Add a React frontend for user interaction
+* Implement real-time updates using WebSockets
+* Include user authentication (JWT or OAuth)
+* Integrate postcard image storage with a cloud service
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Name:** Abdullah Khalid
 **Roll No:** FA23-BCS-019
@@ -257,5 +251,4 @@ This keeps the postcard exchange fair and continuous.
 **University:** COMSATS University Islamabad, Lahore Campus
 
 ---
-
 
