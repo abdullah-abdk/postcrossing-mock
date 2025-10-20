@@ -54,6 +54,8 @@ const PendingSendSchema = new Schema({
   createdAt: { type: Date, default: Date.now }
 });
 
+
+// Each schema is converted into a Mongoose model to interact with MongoDB collections.
 const User = mongoose.model('User', UserSchema);
 const Address = mongoose.model('Address', AddressSchema);
 const Postcard = mongoose.model('Postcard', PostcardSchema);
@@ -62,7 +64,7 @@ const PendingSend = mongoose.model('PendingSend', PendingSendSchema);
 /* Helper */
 async function generatePostcardCode(country) {
   // Very simple code generator: <country>-<7digit-timestamp-suffix>
-  return `${country || 'XX'}-${Date.now().toString().slice(-7)}`;
+  return `${country || 'XX'}-${Date.now().toString().slice(-7)}`;  //Generates a unique postcard code like PK-1234567 using the country code and timestamp.
 }
 
 /* Routes */
@@ -182,7 +184,6 @@ app.post('/postcards/:id/mark', async (req, res) => {
 });
 
 /* 🧭 Generic GET Routes — For inspection/debugging */
-
 // Get all users
 app.get('/users', async (req, res) => {
   try {

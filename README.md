@@ -1,4 +1,4 @@
-# 🌍 PostCrossing Replica — MongoDB + API + Firefox Extension
+<!-- # 🌍 PostCrossing Replica — MongoDB + API + Firefox Extension
 
 # What is PostCrossing?
 PostCrossing is a real-world website where:
@@ -148,4 +148,114 @@ This project fulfills all requirements of the given assignment:
 **Roll No:** FA23-BCS-019  
 **Section:** C  
 **Institution:** COMSATS University Islamabad (Lahore Campus)  
-**Program:** BS Computer Science
+**Program:** BS Computer Science -->
+
+
+
+
+# 🌍 PostCrossing Replica — MongoDB + API + Firefox Extension
+
+## 📌 What is PostCrossing?
+
+PostCrossing is a website where people send and receive postcards from random users around the world. You send one postcard, and you get one in return — creating a global exchange cycle.
+
+---
+
+## 🎯 Project Overview
+
+This project is a **mock version** of PostCrossing. It includes:
+
+* A **MongoDB database** for users and postcards
+* A **Node.js + Express API** for managing postcards and pairing users
+* A **Firefox Extension** for sorting and searching postcard tabs
+
+It was made for academic purposes to practice **API development**, **database design**, and **browser extension building**.
+
+---
+
+## 💻 Tech Stack
+
+| Component       | Technology            |
+| --------------- | --------------------- |
+| Backend         | Node.js + Express     |
+| Database        | MongoDB + Mongoose    |
+| API Testing     | Postman               |
+| Extension       | Firefox (Manifest v3) |
+| Language        | JavaScript (ES6)      |
+| Version Control | Git & GitHub          |
+
+---
+
+## 🔁 Main Feature: Reciprocal Sending
+
+When a user requests to send a card:
+
+1. If another user is waiting → both get paired and exchange postcards
+2. If no one is waiting → the user is added to the queue until someone new joins
+
+This keeps the postcard exchange fair and continuous.
+
+---
+
+## 🦊 Firefox Extension Features
+
+1. **Tab Sorting** – Sort PostCrossing tabs (ascending/descending by postcard code)
+2. **Hybrid Search** – Search by postcard code or title using AND/OR modes
+
+---
+
+## ⚙️ Setup Instructions
+
+1. Clone the repo
+
+   ```bash
+   git clone <repo-url>
+   cd postcrossing-mock
+   ```
+2. Install dependencies
+
+   ```bash
+   npm install
+   ```
+3. Create `.env` file
+
+   ```
+   MONGO_URL=mongodb://localhost:27017
+   MONGO_DB=postcrossing
+   PORT=3000
+   ```
+4. Start the server
+
+   ```bash
+   npm start
+   ```
+
+   or
+
+   ```bash
+   npm run dev
+   ```
+5. Test endpoints using Postman
+6. Load the Firefox extension from `about:debugging#/runtime/this-firefox`
+
+---
+
+## 🚀 Future Improvements
+
+* Add a React frontend
+* Real-time updates with WebSocket
+* JWT authentication
+* Cloud postcard image storage
+
+---
+
+## 👨‍💻 Author
+
+**Name:** Abdullah Khalid
+**Roll No:** FA23-BCS-019
+**Section:** C
+**University:** COMSATS University Islamabad, Lahore Campus
+
+---
+
+
