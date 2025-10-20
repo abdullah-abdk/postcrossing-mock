@@ -1,4 +1,4 @@
-## 🌍 PostCrossing Replica — MongoDB + API + Firefox Extension
+# 🌍 PostCrossing Replica — MongoDB + API + Firefox Extension
 
 # What is PostCrossing?
 PostCrossing is a real-world website where:
@@ -21,19 +21,21 @@ This project was built for academic purposes to demonstrate API design, database
 
 ## 🖥️ Tech Stack
 
-| Backend:  Node.js + Express 
-| Database: MongoDB (Compass + Mongoose) 
-| API Testing: Postman 
-| Browser Extension:  Firefox (Manifest v3) 
-| Programming Language: JavaScript (ES6) 
-| Version Control:  Git & GitHub 
-| Environment Variables:  `.env` file with MongoDB connection URL 
+| **Component**           | **Technology / Tool**                         |
+|--------------------------|----------------------------------------------|
+| **Backend**              | Node.js + Express                            |
+| **Database**             | MongoDB (Compass + Mongoose)                 |
+| **API Testing**          | Postman                                      |
+| **Browser Extension**    | Firefox (Manifest v3)                        |
+| **Programming Language** | JavaScript (ES6)                             |
+| **Version Control**      | Git & GitHub                                 |
+| **Environment Variables**| `.env` file with MongoDB connection URL      |
 
 ---
 
-## ⚙️ Features Implemented
+# ⚙️ Features Implemented
 ## 🔁 Reciprocal Postcard Logic
-  # How It Works
+  ### How It Works
     The reciprocal matching system is the core feature of PostCrossing. Here's the detailed workflow:
 
   ### Scenario 1: Successful Pairing
@@ -52,10 +54,10 @@ This project was built for academic purposes to demonstrate API design, database
     4.Next user will be paired with User A
 
 ## 🦊 Firefox Extension
-# Overview
+### Overview
   The Firefox Extension adds powerful tab management capabilities specifically for PostCrossing postcard pages.
 
-# Features Implemented
+### Features Implemented
   1. Tab Sorting
     Sort postcard tabs in ascending or descending order
     Sorts by card number (e.g., CL-34269 < CN-4087990 < US-11797804)
@@ -71,8 +73,8 @@ This project was built for academic purposes to demonstrate API design, database
         OR Mode: Match either title OR code
 
 
-## 📦 Installation & Setup
-# Prerequisites
+# 📦 Installation & Setup
+## Prerequisites
 
 Node.js (v14 or higher)
 MongoDB (v4.4 or higher)
@@ -94,33 +96,33 @@ MongoDB Compass (for database GUI)
     PORT=3000
 
 ### Step 4: Start the Server
-  # Development mode
+  ### Development mode
     npm start
-  # Or with nodemon (auto-restart)
+  ### Or with nodemon (auto-restart)
     npm run dev
   
-  # Once connected, you’ll see:
+  ### Once connected, you’ll see:
     ✅ MongoDB connected
     🚀 Server running on http://localhost:3000
 
 ### Step 5: Testing with Postman
-  1.Start the backend server
-  2.Open Postman
-  3.Use the above endpoints (base URL: http://localhost:3000)
-  4.Send requests using POST / GET methods
-  5.Verify results in MongoDB Compass
+  1. Start the backend server
+  2. Open Postman
+  3. Use the above endpoints (base URL: [http://localhost:3000](http://localhost:3000))
+  4. Send requests using POST / GET methods
+  5. Verify results in MongoDB Compass
 
 ## FireFox Extension
 ### Step 6: Load Firefox Extension
-  1.Open Firefox
-  2.Navigate to about:debugging#/runtime/this-firefox
-  3.Click "Load Temporary Add-on..."
-  4.Select manifest.json from extension folder
-  5.Extension icon appears in toolbar
+  1. Open Firefox
+  2. Navigate to about:debugging#/runtime/this-firefox
+  3. Click "Load Temporary Add-on..."
+  4. Select manifest.json from extension folder
+  5. Extension icon appears in toolbar
 
 ---
 
-## 🧠 Optional Future Improvements
+# 🧠 Optional Future Improvements
 
 - Add React frontend for visualizing users and postcards.
 - Implement WebSocket for real-time card updates.
@@ -129,7 +131,7 @@ MongoDB Compass (for database GUI)
 
 ---
 
-## 🏁 Conclusion
+# 🏁 Conclusion
 
 This project fulfills all requirements of the given assignment:
 
@@ -142,8 +144,8 @@ This project fulfills all requirements of the given assignment:
 ---
 
 # 👨‍💻 Author Information
-Name: Abdullah Khalid
-Roll No: FA23-BCS-019
-Section: C
-Institution: COMSATS University Islamabad (Lahore Campus)
-Program: BS Computer Science
+**Name:** Abdullah Khalid  
+**Roll No:** FA23-BCS-019  
+**Section:** C  
+**Institution:** COMSATS University Islamabad (Lahore Campus)  
+**Program:** BS Computer Science
