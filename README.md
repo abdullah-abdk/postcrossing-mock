@@ -174,7 +174,7 @@ This project was developed for academic purposes to practice full-stack developm
 | Backend           | Node.js and Express   |
 | Database          | MongoDB with Mongoose |
 | API Testing       | Postman               |
-| Browser Extension | Firefox (Manifest v3) |
+| Browser Extension | Firefox (Manifest v2) |
 | Language          | JavaScript (ES6)      |
 | Version Control   | Git and GitHub        |
 
