@@ -234,15 +234,6 @@ This project was developed for academic purposes to practice full-stack developm
 
 ---
 
-## Future Enhancements
-
-* Add a React frontend for user interaction
-* Implement real-time updates using WebSockets
-* Include user authentication (JWT or OAuth)
-* Integrate postcard image storage with a cloud service
-
----
-
 ## Author
 
 **Name:** Abdullah Khalid
