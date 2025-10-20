@@ -82,18 +82,19 @@ Firefox Browser (for extension)
 Postman (for API testing)
 MongoDB Compass (for database GUI)
 
+
 ### Step 1: Clone Repository
-  git clone <your-repository-url>
-  cd postcrossing-mock-project
+git clone <your-repository-url>
+cd postcrossing-mock-project
 
 ### Step 2: Install Dependencies
-  npm install
+npm install
 
 ### Step 3: Setup environment
-  Create a .env file in the project root:
-    MONGO_URL=mongodb://localhost:27017
-    MONGO_DB=postcrossing
-    PORT=3000
+MONGO_URL=mongodb://localhost:27017
+MONGO_DB=postcrossing
+PORT=3000
+
 
 ### Step 4: Start the Server
   ### Development mode
