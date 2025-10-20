@@ -74,13 +74,12 @@ This project was built for academic purposes to demonstrate API design, database
 
 
 # 📦 Installation & Setup
-## Prerequisites
-
-Node.js (v14 or higher)
-MongoDB (v4.4 or higher)
-Firefox Browser (for extension)
-Postman (for API testing)
-MongoDB Compass (for database GUI)
+## ⚙️ Prerequisites
+- **Node.js:** v14 or higher  
+- **MongoDB:** v4.4 or higher  
+- **Firefox Browser:** Required for testing the extension  
+- **Postman:** For API testing  
+- **MongoDB Compass:** For viewing and managing database
 
 
 ### Step 1: Clone Repository
