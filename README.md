@@ -233,13 +233,3 @@ This project was developed for academic purposes to practice full-stack developm
 6. Load the Firefox extension through `about:debugging#/runtime/this-firefox`.
 
 ---
-
-## Author
-
-**Name:** Abdullah Khalid
-**Roll No:** FA23-BCS-019
-**Section:** C
-**University:** COMSATS University Islamabad, Lahore Campus
-
----
-
