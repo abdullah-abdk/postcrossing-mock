@@ -31,12 +31,12 @@ This project was built for academic purposes to demonstrate API design, database
 
 ---
 
-### ⚙️ Features Implemented
+## ⚙️ Features Implemented
 ## 🔁 Reciprocal Postcard Logic
   # How It Works
     The reciprocal matching system is the core feature of PostCrossing. Here's the detailed workflow:
 
-  # Scenario 1: Successful Pairing
+  ### Scenario 1: Successful Pairing
     1.User A sends request → System checks PendingSends collection
     2.User B found in queue → System pairs them together
     3.Two postcards created:
@@ -45,7 +45,7 @@ This project was built for academic purposes to demonstrate API design, database
     4.Both users receive addresses and can mail physical postcards
     5.User B removed from queue
 
-  # Scenario 2: No Match Available
+  ### Scenario 2: No Match Available
     1.User A sends request → System checks PendingSends collection
     2.No users in queue → Cannot pair
     3.User A added to queue → Waits for next user
@@ -80,20 +80,20 @@ Firefox Browser (for extension)
 Postman (for API testing)
 MongoDB Compass (for database GUI)
 
-# Step 1: Clone Repository
+### Step 1: Clone Repository
   git clone <your-repository-url>
   cd postcrossing-mock-project
 
-# Step 2: Install Dependencies
+### Step 2: Install Dependencies
   npm install
 
-# Step 3: Setup environment
+### Step 3: Setup environment
   Create a .env file in the project root:
     MONGO_URL=mongodb://localhost:27017
     MONGO_DB=postcrossing
     PORT=3000
 
-# Step 4: Start the Server
+### Step 4: Start the Server
   # Development mode
     npm start
   # Or with nodemon (auto-restart)
@@ -103,7 +103,7 @@ MongoDB Compass (for database GUI)
     ✅ MongoDB connected
     🚀 Server running on http://localhost:3000
 
-# Step 5: Testing with Postman
+### Step 5: Testing with Postman
   1.Start the backend server
   2.Open Postman
   3.Use the above endpoints (base URL: http://localhost:3000)
@@ -111,7 +111,7 @@ MongoDB Compass (for database GUI)
   5.Verify results in MongoDB Compass
 
 ## FireFox Extension
-# Step 6: Load Firefox Extension
+### Step 6: Load Firefox Extension
   1.Open Firefox
   2.Navigate to about:debugging#/runtime/this-firefox
   3.Click "Load Temporary Add-on..."
