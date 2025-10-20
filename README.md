@@ -203,7 +203,7 @@ This project was developed for academic purposes to practice full-stack developm
 1. Clone the repository
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/abdullah-abdk/postcrossing-mock
    cd postcrossing-replica
    ```
 2. Install dependencies
