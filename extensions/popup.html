@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>PostCrossing Tools</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 12px;
+      width: 320px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      margin-bottom: 6px;
+    }
+
+    .row {
+      display: flex;
+      gap: 6px;
+    }
+
+    button {
+      padding: 8px;
+      flex: 1;
+      cursor: pointer;
+      border-radius: 6px;
+      border: none;
+    }
+
+    #searchBtn {
+      background: #4CAF50;
+      color: white;
+    }
+
+    #sortAsc {
+      background: #2196F3;
+      color: white;
+    }
+
+    #sortDesc {
+      background: #0d8bf2;
+      color: white;
+    }
+
+    .mode {
+      margin: 8px 0;
+      font-size: 13px;
+    }
+
+    #results {
+      margin-top: 10px;
+      max-height: 260px;
+      overflow: auto;
+      border-top: 1px solid #eee;
+      padding-top: 6px;
+    }
+
+    .tabRow {
+      padding: 6px;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .tabInfo {
+      width: 75%;
+    }
+
+    small {
+      display: block;
+      color: #666;
+    }
+
+    .actionBtn {
+      margin-left: 6px;
+      padding: 6px 8px;
+      border-radius: 6px;
+      background: #eee;
+      cursor: pointer;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h3 style="margin:0 0 8px 0">PostCrossing Tools</h3>
+
+  <input id="query" type="text" placeholder="Search query (code or title keyword)" />
+
+  <div class="mode">
+    <label><input type="radio" name="mode" value="or" checked /> OR (URL or Title)</label>
+    &nbsp;&nbsp;
+    <label><input type="radio" name="mode" value="and" /> AND (URL & Title)</label>
+  </div>
+
+  <div class="row">
+    <button id="searchBtn">Search</button>
+    <button id="clearBtn" style="background:#f44336;color:#fff">Clear</button>
+  </div>
+
+  <div class="row" style="margin-top:6px;">
+    <button id="sortAsc">Sort Asc</button>
+    <button id="sortDesc">Sort Desc</button>
+  </div>
+
+  <div id="results"></div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
