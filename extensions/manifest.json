@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "PostCrossing Tab Sorter + Hybrid Search",
-  "version": "1.1",
-  "description": "Sort and hybrid-search PostCrossing postcard tabs.",
+  "name": "PostCrossing Tab Sorter",
+  "version": "1.0",
+  "description": "Sort open PostCrossing postcard tabs by their numeric id (e.g., CL-34269).",
   "permissions": [
     "tabs"
   ],
@@ -13,10 +13,12 @@
   },
   "browser_action": {
     "default_icon": "icon.png",
-    "default_title": "PostCrossing Tools",
+    "default_title": "Sort Postcrossing Tabs",
     "default_popup": "popup.html"
   },
   "icons": {
-    "48": "icon.png"
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   }
 }

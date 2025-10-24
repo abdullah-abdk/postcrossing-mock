@@ -1,4 +1,3 @@
-// server/index.js
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -55,21 +54,16 @@ const PendingSendSchema = new Schema({
 });
 
 
-// Each schema is converted into a Mongoose model to interact with MongoDB collections.
 const User = mongoose.model('User', UserSchema);
 const Address = mongoose.model('Address', AddressSchema);
 const Postcard = mongoose.model('Postcard', PostcardSchema);
 const PendingSend = mongoose.model('PendingSend', PendingSendSchema);
 
-/* Helper */
 async function generatePostcardCode(country) {
-  // Very simple code generator: <country>-<7digit-timestamp-suffix>
-  return `${country || 'XX'}-${Date.now().toString().slice(-7)}`;  //Generates a unique postcard code like PK-1234567 using the country code and timestamp.
+  return `${country || 'XX'}-${Date.now().toString().slice(-7)}`;
 }
 
 /* Routes */
-
-// 1️⃣ Register user
 app.post('/register', async (req, res) => {
   try {
     const { username, email, name, country } = req.body;
@@ -82,7 +76,6 @@ app.post('/register', async (req, res) => {
   }
 });
 
-// 2️⃣ Add address
 app.post('/users/:userId/addresses', async (req, res) => {
   try {
     const { userId } = req.params;
@@ -93,7 +86,6 @@ app.post('/users/:userId/addresses', async (req, res) => {
   }
 });
 
-// 3️⃣ Send request (pairing)
 app.post('/send-request', async (req, res) => {
   try {
     const { userId, addressId, message } = req.body;
@@ -148,7 +140,7 @@ app.post('/send-request', async (req, res) => {
   }
 });
 
-// 4️⃣ List user postcards
+
 app.get('/users/:userId/postcards', async (req, res) => {
   try {
     const { userId } = req.params;
@@ -161,7 +153,7 @@ app.get('/users/:userId/postcards', async (req, res) => {
   }
 });
 
-// 5️⃣ Mark postcard as sent/received
+
 app.post('/postcards/:id/mark', async (req, res) => {
   try {
     const { id } = req.params;
@@ -183,8 +175,7 @@ app.post('/postcards/:id/mark', async (req, res) => {
   }
 });
 
-/* 🧭 Generic GET Routes — For inspection/debugging */
-// Get all users
+
 app.get('/users', async (req, res) => {
   try {
     const users = await User.find();
@@ -194,7 +185,7 @@ app.get('/users', async (req, res) => {
   }
 });
 
-// Get single user by ID
+
 app.get('/users/:userId', async (req, res) => {
   try {
     const user = await User.findById(req.params.userId);
@@ -205,7 +196,6 @@ app.get('/users/:userId', async (req, res) => {
   }
 });
 
-// Get all addresses
 app.get('/addresses', async (req, res) => {
   try {
     const addresses = await Address.find();
@@ -215,7 +205,6 @@ app.get('/addresses', async (req, res) => {
   }
 });
 
-// Get all postcards
 app.get('/postcards', async (req, res) => {
   try {
     const postcards = await Postcard.find();
@@ -225,7 +214,6 @@ app.get('/postcards', async (req, res) => {
   }
 });
 
-// Get pending queue
 app.get('/pending', async (req, res) => {
   try {
     const pending = await PendingSend.find();
@@ -235,7 +223,6 @@ app.get('/pending', async (req, res) => {
   }
 });
 
-// Get all addresses for a specific user
 app.get('/users/:userId/addresses', async (req, res) => {
   try {
     const addresses = await Address.find({ userId: req.params.userId });
@@ -245,6 +232,5 @@ app.get('/users/:userId/addresses', async (req, res) => {
   }
 });
 
-
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
